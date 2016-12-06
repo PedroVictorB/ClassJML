@@ -11,7 +11,7 @@ package smartclass.ui;
  */
 public class ClassRoomUI extends javax.swing.JFrame {
 
-    private static ClassRoomUI classRoomUI = new ClassRoomUI();
+    private static /*@ nullable @*/ ClassRoomUI classRoomUI = new ClassRoomUI();
 
     /**
      * Creates new form ClassRoomUI
@@ -121,7 +121,6 @@ public class ClassRoomUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(new AbsoluteLayout());
-
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/smartclass/ui/imagens/computador_desligado.png"))); // NOI18N
         jPanel1.add(jLabel2, new AbsoluteConstraints(320, 190, 250, 150));
 
@@ -192,12 +191,12 @@ public class ClassRoomUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JPanel jPanel1;
+    private /*@ nullable @*/ javax.swing.JLabel jLabel1;
+    private /*@ nullable @*/ javax.swing.JLabel jLabel2;
+    private /*@ nullable @*/ javax.swing.JLabel jLabel3;
+    private /*@ nullable @*/ javax.swing.JLabel jLabel4;
+    private /*@ nullable @*/ javax.swing.JLabel jLabel5;
+    private /*@ nullable @*/ javax.swing.JLabel jLabel6;
+    private /*@ nullable @*/ javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

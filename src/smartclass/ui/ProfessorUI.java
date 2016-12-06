@@ -22,16 +22,16 @@ import smartclass.Professor;
  */
 public class ProfessorUI extends javax.swing.JFrame {
     
-    private File p1File = null;
-    private File p2File = null;
-    private File p3File = null;
-    private File p4File = null;
+    private /*@ nullable @*/ File p1File = null;
+    private /*@ nullable @*/ File p2File = null;
+    private /*@ nullable @*/ File p3File = null;
+    private /*@ nullable @*/ File p4File = null;
     
-    public Widget professorWidget;
+    public /*@ nullable @*/ Widget professorWidget;
     
     private String curOpen = "";
 
-    private static ProfessorUI professorUI = new ProfessorUI();
+    private static /*@ nullable @*/ ProfessorUI professorUI = new ProfessorUI();
 
     /**
      * Creates new form ProfessorUI
@@ -711,58 +711,58 @@ public class ProfessorUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.ButtonGroup buttonGroup2;
-    private javax.swing.ButtonGroup buttonGroup3;
-    private javax.swing.ButtonGroup buttonGroup4;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton10;
-    private javax.swing.JRadioButton jRadioButton11;
-    private javax.swing.JRadioButton jRadioButton12;
-    private javax.swing.JRadioButton jRadioButton13;
-    private javax.swing.JRadioButton jRadioButton14;
-    private javax.swing.JRadioButton jRadioButton15;
-    private javax.swing.JRadioButton jRadioButton16;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JRadioButton jRadioButton7;
-    private javax.swing.JRadioButton jRadioButton8;
-    private javax.swing.JRadioButton jRadioButton9;
-    private javax.swing.JSlider jSlider1;
-    private javax.swing.JSlider jSlider2;
-    private javax.swing.JSlider jSlider3;
-    private javax.swing.JSlider jSlider4;
+    private /*@ nullable @*/ javax.swing.ButtonGroup buttonGroup1;
+    private /*@ nullable @*/ javax.swing.ButtonGroup buttonGroup2;
+    private /*@ nullable @*/ javax.swing.ButtonGroup buttonGroup3;
+    private /*@ nullable @*/ javax.swing.ButtonGroup buttonGroup4;
+    private /*@ nullable @*/ javax.swing.JButton jButton1;
+    private /*@ nullable @*/ javax.swing.JButton jButton2;
+    private /*@ nullable @*/ javax.swing.JButton jButton3;
+    private /*@ nullable @*/ javax.swing.JButton jButton4;
+    private /*@ nullable @*/ javax.swing.JLabel jLabel1;
+    private /*@ nullable @*/ javax.swing.JLabel jLabel10;
+    private /*@ nullable @*/ javax.swing.JLabel jLabel11;
+    private /*@ nullable @*/ javax.swing.JLabel jLabel12;
+    private /*@ nullable @*/ javax.swing.JLabel jLabel13;
+    private /*@ nullable @*/ javax.swing.JLabel jLabel14;
+    private /*@ nullable @*/ javax.swing.JLabel jLabel15;
+    private /*@ nullable @*/ javax.swing.JLabel jLabel16;
+    private /*@ nullable @*/ javax.swing.JLabel jLabel17;
+    private /*@ nullable @*/ javax.swing.JLabel jLabel18;
+    private /*@ nullable @*/ javax.swing.JLabel jLabel19;
+    private /*@ nullable @*/ javax.swing.JLabel jLabel2;
+    private /*@ nullable @*/ javax.swing.JLabel jLabel20;
+    private /*@ nullable @*/ javax.swing.JLabel jLabel3;
+    private /*@ nullable @*/ javax.swing.JLabel jLabel4;
+    private /*@ nullable @*/ javax.swing.JLabel jLabel5;
+    private /*@ nullable @*/ javax.swing.JLabel jLabel6;
+    private /*@ nullable @*/ javax.swing.JLabel jLabel7;
+    private /*@ nullable @*/ javax.swing.JLabel jLabel8;
+    private /*@ nullable @*/ javax.swing.JLabel jLabel9;
+    private /*@ nullable @*/ javax.swing.JPanel jPanel1;
+    private /*@ nullable @*/ javax.swing.JPanel jPanel2;
+    private /*@ nullable @*/ javax.swing.JPanel jPanel3;
+    private /*@ nullable @*/ javax.swing.JPanel jPanel4;
+    private /*@ nullable @*/ javax.swing.JRadioButton jRadioButton1;
+    private /*@ nullable @*/ javax.swing.JRadioButton jRadioButton10;
+    private /*@ nullable @*/ javax.swing.JRadioButton jRadioButton11;
+    private /*@ nullable @*/ javax.swing.JRadioButton jRadioButton12;
+    private /*@ nullable @*/ javax.swing.JRadioButton jRadioButton13;
+    private /*@ nullable @*/ javax.swing.JRadioButton jRadioButton14;
+    private /*@ nullable @*/ javax.swing.JRadioButton jRadioButton15;
+    private /*@ nullable @*/ javax.swing.JRadioButton jRadioButton16;
+    private /*@ nullable @*/ javax.swing.JRadioButton jRadioButton2;
+    private /*@ nullable @*/ javax.swing.JRadioButton jRadioButton3;
+    private /*@ nullable @*/ javax.swing.JRadioButton jRadioButton4;
+    private /*@ nullable @*/ javax.swing.JRadioButton jRadioButton5;
+    private /*@ nullable @*/ javax.swing.JRadioButton jRadioButton6;
+    private /*@ nullable @*/ javax.swing.JRadioButton jRadioButton7;
+    private /*@ nullable @*/ javax.swing.JRadioButton jRadioButton8;
+    private /*@ nullable @*/ javax.swing.JRadioButton jRadioButton9;
+    private /*@ nullable @*/ javax.swing.JSlider jSlider1;
+    private /*@ nullable @*/ javax.swing.JSlider jSlider2;
+    private /*@ nullable @*/ javax.swing.JSlider jSlider3;
+    private /*@ nullable @*/ javax.swing.JSlider jSlider4;
     // End of variables declaration//GEN-END:variables
 
     /**

@@ -40,8 +40,8 @@ public class SmartClass {
      */
     public static void main(String[] args) {
 //        Professor p = new Professor("p1", (short)0, 0, null);
-//        p.setName("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-//        System.out.println("teste");
+//        p.setName("aaaaaa");
+//        System.out.println(p.getName());
         Discoverer.start();
 
         Widget roomWidget = WidgetXmlParser.createWidget("xml/room-widget.xml");
@@ -65,7 +65,7 @@ public class SmartClass {
         computerWidget.addService(cs);
         
         AirService as = new AirService(airWidget);
-        airWidget.addService(as);
+        airWidget.addService(as); 
         
 //        ProfessorService profs = new ProfessorService(professorWidget);
 //        professorWidget.addService(profs);

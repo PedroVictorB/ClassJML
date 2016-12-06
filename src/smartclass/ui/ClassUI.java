@@ -13,7 +13,7 @@ import context.arch.widget.Widget;
  */
 public class ClassUI extends javax.swing.JFrame {
 
-    private final Widget roomWidget;
+    private final /*@ nullable @*/ Widget roomWidget;
 
     /**
      * Creates new form ClassUI
@@ -224,47 +224,47 @@ public class ClassUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton5MouseClicked
+    private void jRadioButton5MouseClicked(/*@ nullable @*/ java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton5MouseClicked
         if(jRadioButton5.isSelected()){
             roomWidget.updateData("presence", 1);
         }
     }//GEN-LAST:event_jRadioButton5MouseClicked
 
-    private void jRadioButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton6MouseClicked
+    private void jRadioButton6MouseClicked(/*@ nullable @*/ java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton6MouseClicked
         if(jRadioButton6.isSelected()){
             roomWidget.updateData("presence", 0);
         }
     }//GEN-LAST:event_jRadioButton6MouseClicked
 
-    private void jRadioButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton1MouseClicked
+    private void jRadioButton1MouseClicked(/*@ nullable @*/ java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton1MouseClicked
         if(jRadioButton1.isSelected()){
             roomWidget.updateData("time", 0);
         }
     }//GEN-LAST:event_jRadioButton1MouseClicked
 
-    private void jRadioButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton2MouseClicked
+    private void jRadioButton2MouseClicked(/*@ nullable @*/ java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton2MouseClicked
         if(jRadioButton2.isSelected()){
             roomWidget.updateData("time", 1);
         }
     }//GEN-LAST:event_jRadioButton2MouseClicked
 
-    private void jRadioButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton4MouseClicked
+    private void jRadioButton4MouseClicked(/*@ nullable @*/ java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton4MouseClicked
         if(jRadioButton4.isSelected()){
             roomWidget.updateData("time", 3);
         }
     }//GEN-LAST:event_jRadioButton4MouseClicked
 
-    private void jRadioButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton3MouseClicked
+    private void jRadioButton3MouseClicked(/*@ nullable @*/ java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton3MouseClicked
         if(jRadioButton3.isSelected()){
             roomWidget.updateData("time", 2);
         }
     }//GEN-LAST:event_jRadioButton3MouseClicked
 
-    private void jSlider1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider1StateChanged
+    private void jSlider1StateChanged(/*@ nullable @*/ javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider1StateChanged
         roomWidget.updateData("brightness", (short)jSlider1.getValue());
     }//GEN-LAST:event_jSlider1StateChanged
 
-    private void jSlider2StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider2StateChanged
+    private void jSlider2StateChanged(/*@ nullable @*/ javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider2StateChanged
         roomWidget.updateData("temperature", jSlider2.getValue());
     }//GEN-LAST:event_jSlider2StateChanged
 
@@ -297,20 +297,20 @@ public class ClassUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.ButtonGroup buttonGroup2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JSlider jSlider1;
-    private javax.swing.JSlider jSlider2;
+    private /*@ nullable @*/ javax.swing.ButtonGroup buttonGroup1;
+    private /*@ nullable @*/ javax.swing.ButtonGroup buttonGroup2;
+    private /*@ nullable @*/ javax.swing.JLabel jLabel1;
+    private /*@ nullable @*/ javax.swing.JLabel jLabel2;
+    private /*@ nullable @*/ javax.swing.JLabel jLabel3;
+    private /*@ nullable @*/ javax.swing.JLabel jLabel4;
+    private /*@ nullable @*/ javax.swing.JPanel jPanel1;
+    private /*@ nullable @*/ javax.swing.JRadioButton jRadioButton1;
+    private /*@ nullable @*/ javax.swing.JRadioButton jRadioButton2;
+    private /*@ nullable @*/ javax.swing.JRadioButton jRadioButton3;
+    private /*@ nullable @*/ javax.swing.JRadioButton jRadioButton4;
+    private /*@ nullable @*/ javax.swing.JRadioButton jRadioButton5;
+    private /*@ nullable @*/ javax.swing.JRadioButton jRadioButton6;
+    private /*@ nullable @*/ javax.swing.JSlider jSlider1;
+    private /*@ nullable @*/ javax.swing.JSlider jSlider2;
     // End of variables declaration//GEN-END:variables
 }
