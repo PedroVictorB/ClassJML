@@ -31,25 +31,21 @@ public class ClassRoomUI extends javax.swing.JFrame {
     }
 
     //@ assignable jLabel1;
-    //@ ensures jLabel1.getIcon().toString().equals(getClass().getResource("/smartclass/ui/imagens/sala_luz_ligada.png"));
+    //@ ensures jLabel1.getIcon().toString().equals(getClass().getResource("/smartclass/ui/imagens/sala_luz_ligada.png").toString());
     public void lightOn() {
         System.out.println("lightOn");
-        System.out.println(jLabel1.getIcon().toString());
-        System.out.println(getClass().getResource("/smartclass/ui/imagens/sala_luz_ligada.png"));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/smartclass/ui/imagens/sala_luz_ligada.png")));
     }
 
     //@ assignable jLabel1;
-    //@ ensures jLabel1.getIcon().toString().equals(getClass().getResource("/smartclass/ui/imagens/sala_luz_desligada.png"));
+    //@ ensures jLabel1.getIcon().toString().equals(getClass().getResource("/smartclass/ui/imagens/sala_luz_desligada.png").toString());
     public void lightOff() {
         System.out.println("lightOff");
-        System.out.println(jLabel1.getIcon().toString());
-        System.out.println(getClass().getResource("/smartclass/ui/imagens/sala_luz_desligada.png"));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/smartclass/ui/imagens/sala_luz_desligada.png")));
     }
     
     //@ assignable jLabel4, jLabel3, presence;
-    //@ ensures jLabel3.getIcon().toString().equals(getClass().getResource("/smartclass/ui/imagens/projetor_ligado.png")) && jLabel4.isVisible();
+    //@ ensures jLabel3.getIcon().toString().equals(getClass().getResource("/smartclass/ui/imagens/projetor_ligado.png").toString()) && jLabel4.isVisible();
     public void projectorOn() {
         System.out.println("projectorOn");
         presence = true;
@@ -58,25 +54,23 @@ public class ClassRoomUI extends javax.swing.JFrame {
     }
 
     //@ assignable jLabel4, jLabel3, presence;
-    //@ ensures jLabel3.getIcon().toString().equals(getClass().getResource("/smartclass/ui/imagens/projetor_desligado.png")) && !jLabel4.isVisible();
+    //@ ensures jLabel3.getIcon().toString().equals(getClass().getResource("/smartclass/ui/imagens/projetor_desligado.png").toString()) && !jLabel4.isVisible();
     public void projectorOff() {
         System.out.println("projectorOff");
-        System.out.println(jLabel3.getIcon().toString());
-        System.out.println(getClass().getResource("/smartclass/ui/imagens/projetor_desligado.png"));
         presence = false;
         jLabel4.setVisible(false);
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/smartclass/ui/imagens/projetor_desligado.png")));
     }
     
     //@ assignable jLabel2;
-    //@ ensures jLabel2.getIcon().toString().equals(getClass().getResource("/smartclass/ui/imagens/computador_ligado.png"));
+    //@ ensures jLabel2.getIcon().toString().equals(getClass().getResource("/smartclass/ui/imagens/computador_ligado.png").toString());
     public void computerOn() {
         System.out.println("computerOn");
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/smartclass/ui/imagens/computador_ligado.png")));
     }
 
     //@ assignable jLabel2;
-    //@ ensures jLabel2.getIcon().toString().equals(getClass().getResource("/smartclass/ui/imagens/computador_desligado.png"));
+    //@ ensures jLabel2.getIcon().toString().equals(getClass().getResource("/smartclass/ui/imagens/computador_desligado.png").toString());
     public void computerOff() {
         System.out.println("computerOff");
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/smartclass/ui/imagens/computador_desligado.png")));
@@ -85,7 +79,7 @@ public class ClassRoomUI extends javax.swing.JFrame {
  	
     //@ requires temp >= 0 && temp <= 30;
     //@ assignable jLabel6, jLabel5;
-    //@ ensures jLabel5.getIcon().toString().equals(getClass().getResource("/smartclass/ui/imagens/ar_ligado.png"));
+    //@ ensures jLabel5.getIcon().toString().equals(getClass().getResource("/smartclass/ui/imagens/ar_ligado.png").toString());
     public void airOn(int temp){
         System.out.println("airOn - "+temp+"°C");
         jLabel6.setText(temp+"");
@@ -93,7 +87,7 @@ public class ClassRoomUI extends javax.swing.JFrame {
     }
     
     //@ assignable jLabel6, jLabel5;
-    //@ ensures jLabel5.getIcon().toString().equals(getClass().getResource("/smartclass/ui/imagens/ar_desligado.png")) && jLabel6.getText().equals("");
+    //@ ensures jLabel5.getIcon().toString().equals(getClass().getResource("/smartclass/ui/imagens/ar_desligado.png").toString()) && jLabel6.getText().equals("");
     public void airOff(){
         System.out.println("airOff");
         jLabel6.setText("");
