@@ -22,14 +22,14 @@ import smartclass.Professor;
  */
 public class ProfessorUI extends javax.swing.JFrame {
     
-    private /*@ nullable @*/ File p1File = null;
-    private /*@ nullable @*/ File p2File = null;
-    private /*@ nullable @*/ File p3File = null;
-    private /*@ nullable @*/ File p4File = null;
+    private /*@ spec_public nullable @*/ File p1File = null;
+    private /*@ spec_public nullable @*/ File p2File = null;
+    private /*@ spec_public nullable @*/ File p3File = null;
+    private /*@ spec_public nullable @*/ File p4File = null;
     
     public /*@ nullable @*/ Widget professorWidget;
     
-    private String curOpen = "";
+    private /*@ spec_public @*/ String curOpen = "";
 
     private static /*@ nullable @*/ ProfessorUI professorUI = new ProfessorUI();
 
@@ -57,6 +57,8 @@ public class ProfessorUI extends javax.swing.JFrame {
         return professorUI;
     }
 
+    //@ requires buttonGroup != null;
+    //@ ensures \result != "" || \result == null;
     private String getSelectedButtonText(ButtonGroup buttonGroup) {
         for (Enumeration<AbstractButton> buttons = buttonGroup.getElements(); buttons.hasMoreElements();) {
             AbstractButton button = buttons.nextElement();
@@ -67,6 +69,8 @@ public class ProfessorUI extends javax.swing.JFrame {
         return null;
     }
 
+    //@ requires time.length() > 5;
+    //@ ensures \result >= 0 && \result <= 3;
     private int timeToInt(String time) {
         if (null != time) {
             switch (time) {
@@ -85,11 +89,13 @@ public class ProfessorUI extends javax.swing.JFrame {
         return -1;
     }
 
+    //@ requires name.length() > 1;
+    //@ ensures \result instanceof Professor || \result == null;
     public Professor getProfessorAttributes(String name) {
         if (null != name) {
             switch (name) {
                 case "p1":
-                    return new Professor("p11111111111111111111111111111111111111111111111111111111111", (short) jSlider1.getValue(), timeToInt(getSelectedButtonText(buttonGroup1)), p1File);
+                    return new Professor("p1", (short) jSlider1.getValue(), timeToInt(getSelectedButtonText(buttonGroup1)), p1File);
                 case "p2":
                     return new Professor("p2", (short) jSlider2.getValue(), timeToInt(getSelectedButtonText(buttonGroup2)), p2File);
                 case "p3":
@@ -103,6 +109,8 @@ public class ProfessorUI extends javax.swing.JFrame {
         return null;
     }
 
+    //@ requires time >= -1 && time <= 3;
+    //@ ensures \result != null;
     public String getProfessorOfTheTime(int time) {
         if (timeToInt(getSelectedButtonText(buttonGroup1)) == time) {
             return "p1";

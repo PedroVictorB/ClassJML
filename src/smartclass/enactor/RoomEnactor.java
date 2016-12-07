@@ -249,7 +249,7 @@ public class RoomEnactor extends Enactor {
             } else {
                 light = 0;
             }
-
+            System.out.println("0");
             data.setAttributeValue("light", light);
             outAtts.putAll(data.toAttributes());
 
@@ -274,7 +274,7 @@ public class RoomEnactor extends Enactor {
             } else {
                 status = 0;
             }
-
+            System.out.println("1");
             data.setAttributeValue("status", status);
             outAtts.putAll(data.toAttributes());
 
@@ -299,7 +299,7 @@ public class RoomEnactor extends Enactor {
             } else {
                 status = 0;
             }
-
+            System.out.println("2");
             data.setAttributeValue("status", status);
             data.setAttributeValue("time", inWidgetState.getAttributeValue("time"));
             outAtts.putAll(data.toAttributes());
@@ -325,7 +325,7 @@ public class RoomEnactor extends Enactor {
             } else {
                 status = 0;
             }
-
+            System.out.println("3");
             data.setAttributeValue("status", status);
             data.setAttributeValue("temperature", inWidgetState.getAttributeValue("temperature"));
             data.setAttributeValue("time", inWidgetState.getAttributeValue("time"));
@@ -346,7 +346,7 @@ public class RoomEnactor extends Enactor {
         protected Attributes conditionSatisfied(ComponentDescription inWidgetState, Attributes outAtts) {
             long timestamp = outAtts.getAttributeValue(Widget.TIMESTAMP);
             WidgetData data = new WidgetData("ProfessorWidget", timestamp);
-
+            System.out.println("4");
             data.setAttributeValue("slides", inWidgetState.getAttributeValue("slides"));
             data.setAttributeValue("temperature", inWidgetState.getAttributeValue("temperature"));
             data.setAttributeValue("time", inWidgetState.getAttributeValue("time"));

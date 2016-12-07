@@ -17,7 +17,7 @@ import smartclass.ui.ProfessorUI;
 import java.util.Map;
 
 
-privileged aspect AspectJMLRac_smartclass_services_ComputerService622dd99d_1584_4689_92b0_603ca56fca45 {
+privileged aspect AspectJMLRac_smartclass_services_ComputerService361f9fc8_c5b2_4dfb_803c_088a41283408 {
 
  declare precedence: AspectJMLRac_*, *;
 
@@ -66,7 +66,7 @@ privileged aspect AspectJMLRac_smartclass_services_ComputerService622dd99d_1584_
        String nPostErrorMsg =  "";
        String evalErrorMsg = "";
        boolean rac$b = true;
-         nPostErrorMsg =  "by method smartclass.services.ComputerService.execute regarding code at \nFile \"smartclass.services.ComputerService.java\", line 70 (smartclass.services.ComputerService.java:70)";
+         nPostErrorMsg =  "by method smartclass.services.ComputerService.execute regarding code at \nFile \"smartclass.services.ComputerService.java\", line 71 (smartclass.services.ComputerService.java:71)";
          evalErrorMsg = "Invalid expression in \"smartclass.services.ComputerService.java\"\nCaused by: ";
        if ((si != null)){
          try {
@@ -118,7 +118,7 @@ privileged aspect AspectJMLRac_smartclass_services_ComputerService622dd99d_1584_
            else{
              rac$ErrorMsg += " is ";
            }
-               JMLChecker.checkExceptionalPostcondition(rac$b,"by method smartclass.services.ComputerService.execute regarding code at \nFile \"smartclass.services.ComputerService.java\", line 70 (smartclass.services.ComputerService.java:70)"+"\n\t"+rac$ErrorMsg+rac$e, "jml$ex", true, -1, object$rac.getClass().getName() + "@" + Integer.toHexString(System.identityHashCode(object$rac))+".execute(context.arch.service.helper.ServiceInput)", rac$e);
+               JMLChecker.checkExceptionalPostcondition(rac$b,"by method smartclass.services.ComputerService.execute regarding code at \nFile \"smartclass.services.ComputerService.java\", line 71 (smartclass.services.ComputerService.java:71)"+"\n\t"+rac$ErrorMsg+rac$e, "jml$ex", true, -1, object$rac.getClass().getName() + "@" + Integer.toHexString(System.identityHashCode(object$rac))+".execute(context.arch.service.helper.ServiceInput)", rac$e);
   		 }
   		   }
   	 }
@@ -155,7 +155,7 @@ privileged aspect AspectJMLRac_smartclass_services_ComputerService622dd99d_1584_
   before (final smartclass.services.ComputerService object$rac, final context.arch.service.helper.ServiceInput si) :
      (execution(context.arch.comm.DataObject smartclass.services.ComputerService.execute(context.arch.service.helper.ServiceInput))) && 
      this(object$rac) && args(si) {
-       String preErrorMsg = "by method smartclass.services.ComputerService.execute regarding code at \nFile \"smartclass.services.ComputerService.java\", line 70 (smartclass.services.ComputerService.java:70)"+", when \n"+"\t\'si\' is "+si;
+       String preErrorMsg = "by method smartclass.services.ComputerService.execute regarding code at \nFile \"smartclass.services.ComputerService.java\", line 71 (smartclass.services.ComputerService.java:71)"+", when \n"+"\t\'si\' is "+si;
        String evalErrorMsg = "Invalid expression in \"smartclass.services.ComputerService.java\"\nCaused by: ";
        boolean rac$b = true;
        try {

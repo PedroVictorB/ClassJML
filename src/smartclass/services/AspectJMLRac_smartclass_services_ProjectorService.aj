@@ -11,7 +11,7 @@ import smartclass.ui.ClassRoomUI;
 import java.util.Map;
 
 
-privileged aspect AspectJMLRac_smartclass_services_ProjectorService8f1da834_9cbc_4b3a_aa51_93f7f1252c1d {
+privileged aspect AspectJMLRac_smartclass_services_ProjectorService22feb1ea_36da_4ea1_931e_ffbd284a0fee {
 
  declare precedence: AspectJMLRac_*, *;
 

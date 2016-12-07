@@ -20,7 +20,7 @@ import smartclass.ui.ProfessorUI;
 import java.util.Map;
 
 
-privileged aspect AspectJMLRac_smartclass_SmartClass263af02b_1623_4128_8a36_016e7ad153dc {
+privileged aspect AspectJMLRac_smartclass_SmartClass112677f2_548d_4941_8aaa_057e8a3305d7 {
 
  declare precedence: AspectJMLRac_*, *;
 

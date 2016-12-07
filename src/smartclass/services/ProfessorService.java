@@ -33,6 +33,7 @@ public class ProfessorService extends Service{
 
     @Override
     public DataObject execute(ServiceInput si) {
+    	System.out.println("Professor service");
         int temp = si.getInput().getAttributeValue("temperature");
         int slides = si.getInput().getAttributeValue("slides");
         int time = si.getInput().getAttributeValue("time");

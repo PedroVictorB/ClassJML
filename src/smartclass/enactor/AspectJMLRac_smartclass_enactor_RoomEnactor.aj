@@ -17,7 +17,7 @@ import context.arch.widget.Widget;
 import java.util.Map;
 
 
-privileged aspect AspectJMLRac_smartclass_enactor_RoomEnactor9d342ada_8aea_4e27_9c44_35fc357c847d {
+privileged aspect AspectJMLRac_smartclass_enactor_RoomEnactor99c7592a_3bc8_4fbf_85df_7451b8fe022b {
 
  declare precedence: AspectJMLRac_*, *;
    

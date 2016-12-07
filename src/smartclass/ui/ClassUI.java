@@ -15,10 +15,7 @@ public class ClassUI extends javax.swing.JFrame {
 
     private final /*@ nullable @*/ Widget roomWidget;
 
-    /**
-     * Creates new form ClassUI
-     * @param roomWidget
-     */
+    //@ requires roomWidget != null;
     public ClassUI(final Widget roomWidget) {
         this.roomWidget = roomWidget;
         initComponents();
@@ -224,7 +221,7 @@ public class ClassUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioButton5MouseClicked(/*@ nullable @*/ java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton5MouseClicked
+    private void jRadioButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton5MouseClicked
         if(jRadioButton5.isSelected()){
             roomWidget.updateData("presence", 1);
         }
@@ -242,19 +239,19 @@ public class ClassUI extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jRadioButton1MouseClicked
 
-    private void jRadioButton2MouseClicked(/*@ nullable @*/ java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton2MouseClicked
+    private void jRadioButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton2MouseClicked
         if(jRadioButton2.isSelected()){
             roomWidget.updateData("time", 1);
         }
     }//GEN-LAST:event_jRadioButton2MouseClicked
 
-    private void jRadioButton4MouseClicked(/*@ nullable @*/ java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton4MouseClicked
+    private void jRadioButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton4MouseClicked
         if(jRadioButton4.isSelected()){
             roomWidget.updateData("time", 3);
         }
     }//GEN-LAST:event_jRadioButton4MouseClicked
 
-    private void jRadioButton3MouseClicked(/*@ nullable @*/ java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton3MouseClicked
+    private void jRadioButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton3MouseClicked
         if(jRadioButton3.isSelected()){
             roomWidget.updateData("time", 2);
         }
@@ -262,6 +259,7 @@ public class ClassUI extends javax.swing.JFrame {
 
     private void jSlider1StateChanged(/*@ nullable @*/ javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider1StateChanged
         roomWidget.updateData("brightness", (short)jSlider1.getValue());
+        System.out.println(jSlider1.getValue());
     }//GEN-LAST:event_jSlider1StateChanged
 
     private void jSlider2StateChanged(/*@ nullable @*/ javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider2StateChanged

@@ -4,7 +4,7 @@ import org.jmlspecs.lang.annotation.*;
 import java.util.Map;
 
 
-privileged aspect AspectJMLRac_smartclass_ui_AbsoluteLayoutf102ac21_0fe1_484b_864e_9da4676b6393 {
+privileged aspect AspectJMLRac_smartclass_ui_AbsoluteLayout5329e713_0634_42d7_8c50_b58d6831b1db {
 
  declare precedence: AspectJMLRac_*, *;
 
