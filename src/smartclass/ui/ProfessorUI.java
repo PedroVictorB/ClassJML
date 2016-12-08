@@ -14,6 +14,8 @@ import javax.swing.AbstractAction;
 import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
 import javax.swing.JFileChooser;
+
+import smartclass.Pessoa;
 import smartclass.Professor;
 
 /**
@@ -90,23 +92,27 @@ public class ProfessorUI extends javax.swing.JFrame {
     }
 
     //@ requires name.length() > 1;
-    //@ ensures \result instanceof Professor || \result == null;
-    public Professor getProfessorAttributes(String name) {
-        if (null != name) {
+    //@ ensures \result instanceof Professor;
+    public Professor getProfessorAttributes(/*@ nullable @*/ String name) {
+    	//System.out.println("Professor: "+name);
+    	Pessoa p;
             switch (name) {
                 case "p1":
-                    return new Professor("p1", (short) jSlider1.getValue(), timeToInt(getSelectedButtonText(buttonGroup1)), p1File);
+                    p = new Professor("p1", (short) jSlider1.getValue(), timeToInt(getSelectedButtonText(buttonGroup1)), p1File, "IMD");
+                    return (Professor) p;
                 case "p2":
-                    return new Professor("p2", (short) jSlider2.getValue(), timeToInt(getSelectedButtonText(buttonGroup2)), p2File);
+                	p = new Professor("p2", (short) jSlider2.getValue(), timeToInt(getSelectedButtonText(buttonGroup2)), p2File, "IMD");
+                    return (Professor) p;
                 case "p3":
-                    return new Professor("p3", (short) jSlider3.getValue(), timeToInt(getSelectedButtonText(buttonGroup3)), p3File);
+                	p = new Professor("p3", (short) jSlider3.getValue(), timeToInt(getSelectedButtonText(buttonGroup3)), p3File, "DIMAP");
+                    return (Professor) p;
                 case "p4":
-                    return new Professor("p4", (short) jSlider4.getValue(), timeToInt(getSelectedButtonText(buttonGroup4)), p4File);
+                	p = new Professor("p4", (short) jSlider4.getValue(), timeToInt(getSelectedButtonText(buttonGroup4)), p4File, "DIMAP");
+                    return (Professor) p;
                 default:
-                    return null;
+                	p = new Professor("p1", (short) jSlider1.getValue(), timeToInt(getSelectedButtonText(buttonGroup1)), p1File, "IMD");
+                	return (Professor) p;
             }
-        }
-        return null;
     }
 
     //@ requires time >= -1 && time <= 3;
