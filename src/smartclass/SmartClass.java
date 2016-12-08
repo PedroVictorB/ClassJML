@@ -39,9 +39,9 @@ public class SmartClass {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-//        Professor p = new Professor("p1", (short)0, 0, null);
-//        p.setName("aaaaaa");
-//        System.out.println(p.getName());
+        Professor p = new Professor("p1", (short)0, 0, null);
+        p.setName("aaaaaa");
+        System.out.println(p.getName());
         Discoverer.start();
 
         Widget roomWidget = WidgetXmlParser.createWidget("xml/room-widget.xml");
