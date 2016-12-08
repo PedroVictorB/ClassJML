@@ -12,12 +12,12 @@ import java.io.File;
  * @author Pedro
  */
 public class Professor {
-    private String name;
-    private Short temperature;
-    private int time;
-    private File slides;
+    private /*@ spec_public nullable @*/ String name;
+    private /*@ spec_public nullable @*/ Short temperature;
+    private /*@ spec_public nullable @*/ int time;
+    private /*@ spec_public nullable @*/ File slides;
     
-    public Professor(String name, Short temperature, int time, File slides){
+    public Professor(String name, Short temperature, int time, /*@ nullable @*/File slides){
         this.name = name;
         this.temperature = temperature;
         this.time = time;
@@ -67,10 +67,7 @@ public class Professor {
         this.time = time;
     }
 
-    /**
-     * @return the slides
-     */
-    public File getSlides() {
+    public /*@ pure nullable @*/ File getSlides() {
         return slides;
     }
 

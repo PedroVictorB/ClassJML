@@ -15,6 +15,7 @@ import context.arch.discoverer.query.comparison.AttributeComparison;
 import context.arch.enactor.Enactor;
 import context.arch.enactor.EnactorReference;
 import context.arch.service.helper.ServiceInput;
+import context.arch.storage.Attribute;
 import context.arch.storage.AttributeNameValue;
 import context.arch.storage.Attributes;
 import context.arch.widget.Widget;
@@ -26,6 +27,7 @@ import context.arch.widget.Widget.WidgetData;
  */
 public class RoomEnactor extends Enactor {
 
+	//@ requires inWidgetSubscriptionQuery != null && outWidgetSubscriptionQuery != null && outcomeName != null && shortId != null && type != null;
     public RoomEnactor(AbstractQueryItem<?, ?> inWidgetSubscriptionQuery, AbstractQueryItem<?, ?> outWidgetSubscriptionQuery, String outcomeName, String shortId, String type) {
         super(inWidgetSubscriptionQuery, outWidgetSubscriptionQuery, outcomeName, shortId);
 
@@ -230,11 +232,13 @@ public class RoomEnactor extends Enactor {
 
     private class RoomEnactorLightReference extends EnactorReference {
 
+    	//@ requires conditionQuery != null && outcomeValue != null;
         public RoomEnactorLightReference(AbstractQueryItem<?, ?> conditionQuery, String outcomeValue) {
             super(RoomEnactor.this, conditionQuery, outcomeValue);
         }
 
-        @Override
+        //@ requires inWidgetState != null && outAtts != null;
+        //@ ensures \result != null && (\forall int i; 0 <= i && i < outAtts.size();outAtts.values().toArray()[i] != null);
         protected Attributes conditionSatisfied(ComponentDescription inWidgetState, Attributes outAtts) {
             long timestamp = outAtts.getAttributeValue(Widget.TIMESTAMP);
             WidgetData data = new WidgetData("LightWidget", timestamp);
@@ -252,7 +256,7 @@ public class RoomEnactor extends Enactor {
             System.out.println("0");
             data.setAttributeValue("light", light);
             outAtts.putAll(data.toAttributes());
-
+            
             return outAtts;
         }
 
@@ -260,11 +264,13 @@ public class RoomEnactor extends Enactor {
 
     private class RoomEnactorProjectorReference extends EnactorReference {
 
+    	//@ requires conditionQuery != null && outcomeValue != null;
         public RoomEnactorProjectorReference(AbstractQueryItem<?, ?> conditionQuery, String outcomeValue) {
             super(RoomEnactor.this, conditionQuery, outcomeValue);
         }
 
-        @Override
+        //@ requires inWidgetState != null && outAtts != null;
+        //@ ensures \result != null && (\forall int i; 0 <= i && i < outAtts.size();outAtts.values().toArray()[i] != null);
         protected Attributes conditionSatisfied(ComponentDescription inWidgetState, Attributes outAtts) {
             long timestamp = outAtts.getAttributeValue(Widget.TIMESTAMP);
             WidgetData data = new WidgetData("ProjectorWidget", timestamp);
@@ -285,11 +291,13 @@ public class RoomEnactor extends Enactor {
     
     private class RoomEnactorComputerReference extends EnactorReference {
 
+    	//@ requires conditionQuery != null && outcomeValue != null;
         public RoomEnactorComputerReference(AbstractQueryItem<?, ?> conditionQuery, String outcomeValue) {
             super(RoomEnactor.this, conditionQuery, outcomeValue);
         }
 
-        @Override
+        //@ requires inWidgetState != null && outAtts != null;
+        //@ ensures \result != null && (\forall int i; 0 <= i && i < outAtts.size();outAtts.values().toArray()[i] != null);
         protected Attributes conditionSatisfied(ComponentDescription inWidgetState, Attributes outAtts) {
             long timestamp = outAtts.getAttributeValue(Widget.TIMESTAMP);
             WidgetData data = new WidgetData("ComputerWidget", timestamp);
@@ -299,7 +307,7 @@ public class RoomEnactor extends Enactor {
             } else {
                 status = 0;
             }
-            System.out.println("2");
+            System.out.println("2"+" / "+inWidgetState.getAttributeValue("time"));
             data.setAttributeValue("status", status);
             data.setAttributeValue("time", inWidgetState.getAttributeValue("time"));
             outAtts.putAll(data.toAttributes());
@@ -311,11 +319,13 @@ public class RoomEnactor extends Enactor {
     
     private class RoomEnactorAirReference extends EnactorReference {
 
+    	//@ requires conditionQuery != null && outcomeValue != null;
         public RoomEnactorAirReference(AbstractQueryItem<?, ?> conditionQuery, String outcomeValue) {
             super(RoomEnactor.this, conditionQuery, outcomeValue);
         }
 
-        @Override
+        //@ requires inWidgetState != null && outAtts != null;
+        //@ ensures \result != null && (\forall int i; 0 <= i && i < outAtts.size();outAtts.values().toArray()[i] != null);
         protected Attributes conditionSatisfied(ComponentDescription inWidgetState, Attributes outAtts) {
             long timestamp = outAtts.getAttributeValue(Widget.TIMESTAMP);
             WidgetData data = new WidgetData("AirWidget", timestamp);
@@ -325,7 +335,7 @@ public class RoomEnactor extends Enactor {
             } else {
                 status = 0;
             }
-            System.out.println("3");
+            System.out.println("3"+" / "+inWidgetState.getAttributeValue("time"));
             data.setAttributeValue("status", status);
             data.setAttributeValue("temperature", inWidgetState.getAttributeValue("temperature"));
             data.setAttributeValue("time", inWidgetState.getAttributeValue("time"));
@@ -338,11 +348,13 @@ public class RoomEnactor extends Enactor {
     
     private class RoomEnactorProfessorReference extends EnactorReference {
 
+    	//@ requires conditionQuery != null && outcomeValue != null;
         public RoomEnactorProfessorReference(AbstractQueryItem<?, ?> conditionQuery, String outcomeValue) {
             super(RoomEnactor.this, conditionQuery, outcomeValue);
         }
 
-        @Override
+        //@ requires inWidgetState != null && outAtts != null;
+        //@ ensures \result != null && (\forall int i; 0 <= i && i < outAtts.size();outAtts.values().toArray()[i] != null);
         protected Attributes conditionSatisfied(ComponentDescription inWidgetState, Attributes outAtts) {
             long timestamp = outAtts.getAttributeValue(Widget.TIMESTAMP);
             WidgetData data = new WidgetData("ProfessorWidget", timestamp);

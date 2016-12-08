@@ -19,6 +19,7 @@ import smartclass.ui.ClassRoomUI;
  */
 public class ProfessorService extends Service{
     
+	//@ requires widget != null;
     public ProfessorService(final Widget widget) {
         super(widget, "ProfessorService",
                 new FunctionDescriptions() {
@@ -31,7 +32,8 @@ public class ProfessorService extends Service{
         });
     }
 
-    @Override
+    //@ requires si != null;
+    //@ ensures \result instanceof DataObject;
     public DataObject execute(ServiceInput si) {
     	System.out.println("Professor service");
         int temp = si.getInput().getAttributeValue("temperature");

@@ -22,6 +22,7 @@ import smartclass.ui.ProfessorUI;
  */
 public class LightService extends Service {
 
+	//@ requires widget != null;
     public LightService(final Widget widget) {
         super(widget, "LightService",
                 new FunctionDescriptions() {
@@ -34,7 +35,8 @@ public class LightService extends Service {
         });
     }
 
-    @Override
+    //@ requires si != null;
+    //@ ensures \result instanceof DataObject;
     public DataObject execute(ServiceInput si) {
     	System.out.println("Light service");
         int light = si.getInput().getAttributeValue("light");

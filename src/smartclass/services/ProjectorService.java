@@ -19,6 +19,7 @@ import smartclass.ui.ClassRoomUI;
  */
 public class ProjectorService extends Service{
     
+	//@ requires widget != null;
     public ProjectorService(final Widget widget) {
         super(widget, "ProjectorService",
                 new FunctionDescriptions() {
@@ -31,7 +32,8 @@ public class ProjectorService extends Service{
         });
     }
 
-    @Override
+    //@ requires si != null;
+    //@ ensures \result instanceof DataObject;
     public DataObject execute(ServiceInput si) {
         int status = si.getInput().getAttributeValue("status");
         System.out.println("Projector service");

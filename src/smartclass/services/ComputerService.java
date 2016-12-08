@@ -25,6 +25,7 @@ import smartclass.ui.ProfessorUI;
  */
 public class ComputerService extends Service {
 
+	//@ requires widget != null;
     public ComputerService(final Widget widget) {
         super(widget, "ComputerService",
                 new FunctionDescriptions() {
@@ -37,11 +38,12 @@ public class ComputerService extends Service {
         });
     }
 
-    @Override
+    //@ requires si != null;
+    //@ ensures \result instanceof DataObject;
     public DataObject execute(ServiceInput si) {
         int status = si.getInput().getAttributeValue("status");
         int time = si.getInput().getAttributeValue("time");
-        System.out.println("Computer service");
+        System.out.println("Computer service"); 
         if (status == 1) {
             ProfessorUI professorUI = ProfessorUI.getInstance();
             Professor p = professorUI.getProfessorAttributes(professorUI.getProfessorOfTheTime(time));

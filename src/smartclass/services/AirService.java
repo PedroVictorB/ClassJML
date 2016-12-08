@@ -21,6 +21,7 @@ import smartclass.ui.ProfessorUI;
  */
 public class AirService extends Service{
     
+	//@ requires widget != null;
     public AirService(final Widget widget) {
         super(widget, "AirService",
                 new FunctionDescriptions() {
@@ -33,7 +34,8 @@ public class AirService extends Service{
         });
     }
 
-    @Override
+    //@ requires si != null;
+    //@ ensures \result instanceof DataObject;
     public DataObject execute(ServiceInput si) {
         int status = si.getInput().getAttributeValue("status");
         int temp = si.getInput().getAttributeValue("temperature");
