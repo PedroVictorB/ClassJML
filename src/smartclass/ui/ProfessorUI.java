@@ -91,6 +91,7 @@ public class ProfessorUI extends javax.swing.JFrame {
         return -1;
     }
 
+    //@ public normal_behavior
     //@ requires name.length() > 1;
     //@ ensures \result instanceof Professor;
     public Professor getProfessorAttributes(/*@ nullable @*/ String name) {
@@ -115,6 +116,7 @@ public class ProfessorUI extends javax.swing.JFrame {
             }
     }
 
+    //@ public normal_behavior
     //@ requires time >= -1 && time <= 3;
     //@ ensures \result != null;
     public String getProfessorOfTheTime(int time) {

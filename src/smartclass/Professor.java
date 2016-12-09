@@ -15,6 +15,7 @@ public class Professor extends Pessoa implements IProfessor{
 	
 	private /*@ spec_public @*/ boolean departamento = false; //@ in dep;
     
+	//@ public normal_behavior
 	//@ requires dep.equals("DIMAP") || dep.equals("IMD");
 	//@ assignable dep;
     public Professor(String na, short temp, int tim,/*@ nullable @*/ File slid, String departamento){

@@ -25,6 +25,7 @@ import smartclass.ui.ProfessorUI;
  */
 public class ComputerService extends Service {
 
+	//@ public normal_behavior
 	//@ requires widget != null;
     public ComputerService(final Widget widget) {
         super(widget, "ComputerService",

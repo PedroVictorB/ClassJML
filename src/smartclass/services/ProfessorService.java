@@ -19,6 +19,7 @@ import smartclass.ui.ClassRoomUI;
  */
 public class ProfessorService extends Service{
     
+	//@ public normal_behavior
 	//@ requires widget != null;
     public ProfessorService(final Widget widget) {
         super(widget, "ProfessorService",
@@ -32,6 +33,7 @@ public class ProfessorService extends Service{
         });
     }
 
+    //@ public normal_behavior
     //@ requires si != null;
     //@ ensures \result instanceof DataObject;
     public DataObject execute(ServiceInput si) {

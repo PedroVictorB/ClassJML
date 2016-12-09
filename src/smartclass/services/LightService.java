@@ -22,6 +22,7 @@ import smartclass.ui.ProfessorUI;
  */
 public class LightService extends Service {
 
+	//@ public normal_behavior
 	//@ requires widget != null;
     public LightService(final Widget widget) {
         super(widget, "LightService",
@@ -35,6 +36,7 @@ public class LightService extends Service {
         });
     }
 
+    //@ public normal_behavior
     //@ requires si != null;
     //@ ensures \result instanceof DataObject;
     public DataObject execute(ServiceInput si) {

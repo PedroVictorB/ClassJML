@@ -30,6 +30,7 @@ public class ClassRoomUI extends javax.swing.JFrame {
         return classRoomUI;
     }
 
+    //@ public normal_behavior
     //@ assignable jLabel1;
     //@ ensures jLabel1.getIcon().toString().equals(getClass().getResource("/smartclass/ui/imagens/sala_luz_ligada.png").toString());
     public void lightOn() {
@@ -37,6 +38,7 @@ public class ClassRoomUI extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/smartclass/ui/imagens/sala_luz_ligada.png")));
     }
 
+    //@ public normal_behavior
     //@ assignable jLabel1;
     //@ ensures jLabel1.getIcon().toString().equals(getClass().getResource("/smartclass/ui/imagens/sala_luz_desligada.png").toString());
     public void lightOff() {
@@ -44,6 +46,7 @@ public class ClassRoomUI extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/smartclass/ui/imagens/sala_luz_desligada.png")));
     }
     
+    //@ public normal_behavior
     //@ assignable jLabel4, jLabel3, presence;
     //@ ensures jLabel3.getIcon().toString().equals(getClass().getResource("/smartclass/ui/imagens/projetor_ligado.png").toString()) && jLabel4.isVisible();
     public void projectorOn() {
@@ -53,6 +56,7 @@ public class ClassRoomUI extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/smartclass/ui/imagens/projetor_ligado.png")));
     }
 
+    //@ public normal_behavior
     //@ assignable jLabel4, jLabel3, presence;
     //@ ensures jLabel3.getIcon().toString().equals(getClass().getResource("/smartclass/ui/imagens/projetor_desligado.png").toString()) && !jLabel4.isVisible();
     public void projectorOff() {
@@ -62,6 +66,7 @@ public class ClassRoomUI extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/smartclass/ui/imagens/projetor_desligado.png")));
     }
     
+    //@ public normal_behavior
     //@ assignable jLabel2;
     //@ ensures jLabel2.getIcon().toString().equals(getClass().getResource("/smartclass/ui/imagens/computador_ligado.png").toString());
     public void computerOn() {
@@ -69,6 +74,7 @@ public class ClassRoomUI extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/smartclass/ui/imagens/computador_ligado.png")));
     }
 
+    //@ public normal_behavior
     //@ assignable jLabel2;
     //@ ensures jLabel2.getIcon().toString().equals(getClass().getResource("/smartclass/ui/imagens/computador_desligado.png").toString());
     public void computerOff() {
@@ -76,7 +82,7 @@ public class ClassRoomUI extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/smartclass/ui/imagens/computador_desligado.png")));
     }
     
- 	
+    //@ public normal_behavior
     //@ requires temp >= 0 && temp <= 30;
     //@ assignable jLabel6, jLabel5;
     //@ ensures jLabel5.getIcon().toString().equals(getClass().getResource("/smartclass/ui/imagens/ar_ligado.png").toString());
@@ -86,6 +92,7 @@ public class ClassRoomUI extends javax.swing.JFrame {
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/smartclass/ui/imagens/ar_ligado.png")));
     }
     
+    //@ public normal_behavior
     //@ assignable jLabel6, jLabel5;
     //@ ensures jLabel5.getIcon().toString().equals(getClass().getResource("/smartclass/ui/imagens/ar_desligado.png").toString()) && jLabel6.getText().equals("");
     public void airOff(){
@@ -94,6 +101,7 @@ public class ClassRoomUI extends javax.swing.JFrame {
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/smartclass/ui/imagens/ar_desligado.png")));
     }
     
+    //@ public normal_behavior
     //@ requires temp >= 0 && temp <= 30;
     //@ assignable jLabel6;
     public void airTemp(int temp){
@@ -104,6 +112,7 @@ public class ClassRoomUI extends javax.swing.JFrame {
         }
     }
     
+    //@ public normal_behavior
     //@ requires p.length() > 1 && p.length() <= 30;
     //@ assignable jLabel4;
     //@ ensures !jLabel4.getIcon().toString().equals("") && jLabel4.getIcon().toString() != null;

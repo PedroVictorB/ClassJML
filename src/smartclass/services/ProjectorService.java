@@ -19,6 +19,7 @@ import smartclass.ui.ClassRoomUI;
  */
 public class ProjectorService extends Service{
     
+	//@ public normal_behavior
 	//@ requires widget != null;
     public ProjectorService(final Widget widget) {
         super(widget, "ProjectorService",
@@ -32,6 +33,7 @@ public class ProjectorService extends Service{
         });
     }
 
+    //@ public normal_behavior
     //@ requires si != null;
     //@ ensures \result instanceof DataObject;
     public DataObject execute(ServiceInput si) {

@@ -21,6 +21,7 @@ import smartclass.ui.ProfessorUI;
  */
 public class AirService extends Service{
     
+	//@ public normal_behavior
 	//@ requires widget != null;
     public AirService(final Widget widget) {
         super(widget, "AirService",

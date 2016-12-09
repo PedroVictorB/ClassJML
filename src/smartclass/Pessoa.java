@@ -9,6 +9,7 @@ public class Pessoa {
 	protected /*@ spec_public nullable @*/ int time;
 	protected /*@ spec_public nullable @*/ File slides;
 	
+	//@ public normal_behavior
 	//@ requires n.length() >= 2 && n.length() <= 15;
 	//@ requires t <= 30 && t >= 17;
 	//@ assignable name;
@@ -30,7 +31,9 @@ public class Pessoa {
         return name;
     }
 
+    //@ public normal_behavior
     //@ requires name.length() >= 2 && name.length() <= 15;
+    //@ assignable name;
     //@ ensures name.length() >= 2;
     public void setName(String name) {
         this.name = name;
@@ -40,7 +43,9 @@ public class Pessoa {
         return temperature;
     }
 
+    //@ public normal_behavior
     //@ requires temperature <= 30 && temperature >= 17;
+    //@ assignable temperature;
     public void setTemperature(short temperature) {
         this.temperature = temperature;
     }
@@ -49,6 +54,9 @@ public class Pessoa {
         return time;
     }
 
+    //@ public normal_behavior
+    //@ requires time >= -1 && time <= 3;
+    //@ assignable time;
     public void setTime(int time) {
         this.time = time;
     }
